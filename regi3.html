@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+    	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		
+
+		<!-- Website Font style -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+		
+		<!-- Google Fonts -->
+		<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+		<link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css' rel="stylesheet" type="text/css">
+		<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js' type="text/javascript"></script>
+        
+        
+		<title>register form</title>
+	
+		<style type="text/css">
+			body, html{
+                  height:100%;
+ 	          
+ 	          /* background-color: steelblue;*/
+ 	           background: url(http://p1.pichost.me/i/66/1910819.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
+  height: 100%;
+  background-color: #060;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+ 
+}   
+}
+h1{
+	text-align: center;
+}
+
+.main{
+ 	margin-top: 15px;
+}
+
+.login-button{
+	margin-top: 5px;
+}
+
+.login-register{
+	font-size: 11px;
+	text-align: center;
+}
+
+
+.form-group{
+	margin-bottom: 15px;
+}
+
+label{
+	margin-bottom: 10px;
+}
+
+
+input,
+input::-webkit-input-placeholder {
+    font-size: 11px;
+    padding-top: 3px;
+}
+
+.main-login{
+ 	/*background-color: #fff;*/
+    /* shadows and rounded borders */
+    -moz-border-radius: 1px;
+    -webkit-border-radius: 1px;
+    border-radius: 1px;
+    
+}
+
+
+.main-center{
+ 	margin-top: 30px;
+ 	margin: 0 auto;
+ 	max-width: 300px;
+    padding: 35px 35px;
+
+}
+
+  input[type="text"]{
+display: block;
+margin-bottom: 15px;
+width: 100%;
+border: 2px solid steelblue;
+background: #FAF6D9;
+
+}
+input[type="password"]{
+display: block;
+margin-bottom: 15px;
+width: 100%;
+border: 2px solid steelblue;
+background: #FAF6D9;
+}
+
+.login-button{
+	margin-top: 8px;
+	font-size: 15PX;
+	margin-left: 8px;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+}
+
+		</style>
+	</head>
+	<body >
+		<div class="container">
+			<div class="row main">
+				
+	            <div class="main-login main-center">
+					<form class="form-horizontal" method="POST" action="#" id="data-form">
+						
+						<div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">first Name</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<input class="form-control" type="text" name="firstname" placeholder="Enterfirstname" id = "txt2"  onchange="firstname_validate(this.value)" required  /> 
+								</div>
+								 
+                                       <div class="status" id="first_error"></div>
+
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="username" class="cols-sm-2 control-label">lastname</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<input class="form-control" type="text" name="lastname" placeholder="Enter lastname" id = "txt1"  onchange="lastname_validate(this.value)" required  />  
+                       
+                                  </div>
+                                    <div class="status" id="last_error"></div>
+								</div>
+							</div>
+						
+						<div class="form-group">
+							<label for="email" class="cols-sm-2 control-label">Your Email</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+									 <input class="form-control" required type="text" name="email" placeholder="Enter email"  id = "email"  onchange="email_validate(this.value);" />
+									 
+                                       </div>
+                                       
+                                       <div class="status" id="status"></div>
+								</div>
+							</div>
+						
+
+						<div class="form-group">
+							<label for="password" class="cols-sm-2 control-label">Password</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+									 <input required name="password1" type="password" placeholder="Enter password" class="form-control inputpass" minlength="4" maxlength="16"  id="pass1" /> 
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+									 <input required name="password2" type="password" placeholder="re-enter password" class="form-control inputpass" minlength="4" maxlength="16"   id="pass2" onkeyup="checkPass(); return false;" />
+									 
+								</div>
+								 <span id="confirmMessage" class="confirmMessage"></span>
+							</div>
+						</div>
+
+						<div class="form-group ">
+							
+							 <input type="submit" value="Submit">
+						</div>
+						<div class="login-register">
+				            <a href="index.php">Login</a>
+				         </div>
+					</form>
+					</div>
+
+				</div>
+
+			</div>
+	
+
+
+<script type="text/javascript">
+
+
+       function checkPass()
+{
+    //Store the password field objects into variables ...
+    var pass1 = document.getElementById('pass1');
+    var pass2 = document.getElementById('pass2');
+    //Store the Confimation Message Object ...
+    var message = document.getElementById('confirmMessage');
+    //Set the colors we will be using ...
+    var goodColor = "#66cc66";
+    var badColor = "#ff6666";
+    //Compare the values in the password field 
+    //and the confirmation field
+    if(pass1.value == pass2.value){
+        //The passwords match. 
+        //Set the color to the good color and inform
+        //the user that they have entered the correct password 
+        pass2.style.backgroundColor = goodColor;
+        message.style.color = goodColor;
+        message.innerHTML = "Passwords Match"
+    }else{
+        //The passwords do not match.
+        //Set the color to the bad color and
+        //notify the user.
+        pass2.style.backgroundColor = badColor;
+        message.style.color = badColor;
+        message.innerHTML = "Passwords Do Not Match!"
+    }
+} 
+
+
+     function firstname_validate(txt2){
+	var regFirstname= /^([_a-zA-Z ])/;
+	if(regFirstname.test(txt2) == false){
+		document.getElementById("first_error").innerHTML = "<span class='warning'>only alphabatics.</span>";
+	}
+}
+   
+	function lastname_validate(txt1){
+	var regLastname= /^([_a-zA-Z ])/;
+	if(regLastname.test(txt1) == false){
+		document.getElementById("last_error").innerHTML = "<span class='warning'>only alphabatics.</span>";
+	}
+
+}
+// validate email
+function email_validate(email)
+{
+var regMail = /^([_a-zA-Z0-9-]+)(\.[_a-zA-Z0-9-]+)*@([a-zA-Z0-9-]+\.)+([a-zA-Z]{2,3})$/;
+
+    if(regMail.test(email) == false)
+    {
+    document.getElementById("status").innerHTML = "<span class='warning'>Email address is not valid yet.</span>";
+    }
+    else
+    {
+    document.getElementById("status").innerHTML = "<span class='valid'>Thanks, you have entered a valid Email address!</span>"; 
+    }
+}
+
+var form=document.getElementById('data-form');
+	form.onsubmit=function (event) {
+		event.preventDefault();
+		// console.log("name:"+form.firstname.value);
+		// console.log("lastname:"+form.lastname.value);
+		// console.log("email:"+form.email.value);
+		// console.log("password:"+form.password1.value);
+		// console.log("conform password:"+form.password2.value);
+	    
+		var inputs={
+			"firstname":form.firstname.value,"lastname":form.lastname.value,"Email":form.email.value,"password":form.password1.value,"password2":form.password2.value
+		}
+		console.log(inputs)
+	};
+	
+</script>
+
+		
+</body>
+	
+</html>
